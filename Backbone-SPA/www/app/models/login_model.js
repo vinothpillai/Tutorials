@@ -1,0 +1,1 @@
+var LoginModel = Backbone.Model.extend({  defaults: {	"username":"",	"password":""  }});window.LoginModel = new LoginModel();
