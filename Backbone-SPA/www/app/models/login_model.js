@@ -1,1 +1,1 @@
-var LoginModel = Backbone.Model.extend({  defaults: {	"username":"",	"password":""  }});window.LoginModel = new LoginModel();
+var LoginModel = Backbone.Model.extend({  defaults: {	"username":"",	"password":"",	"empList" : [{"empName":"John","dept":"Banking"},{"empName":"Tom","dept":"Finance"},{"empName":"Ram","dept":"HealthCare"}]  }});window.LoginModel = new LoginModel();

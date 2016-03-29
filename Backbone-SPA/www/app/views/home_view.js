@@ -1,5 +1,5 @@
 var Home_view = Backbone.View.extend({	
-	template: _.template('<label>hello: <%= username %></label> <br/> <input type="button" value="logout" id="back"/>'),
+	template: _.template(home_template),
 	
 	model : LoginModel,
 	
@@ -8,10 +8,16 @@ var Home_view = Backbone.View.extend({
     },
 	
 	events : {
-		'click #back':'goToLogin'
+		'click #back':'goToLogin',
+		'click #emplist':'displayEmpDetails'
 	},
 	
 	goToLogin : function(event){
 		appRouter.navigate("/",{trigger:true});
+	},
+	
+	displayEmpDetails : function(event){
+		var empIndex = $(event.target).data('index');
+		console.log('empIndex');
 	}
 });

@@ -1,11 +1,6 @@
-var Login_view = Backbone.View.extend({
+var Login_view = Backbone.View.extend({	
 	
-	template: _.template('<label>User Name:</label>\
-						<input type="text" id="username"/><br\>\
-						<label>Password:</label>\
-						<input type="password" id="password"/><br\>\
-						<input type="button" value="login" id="login"/>'
-				),
+	template: _.template(login_template),
 	
     render: function () {
 		this.$el.html(this.template);//adding the template content to the main template.
